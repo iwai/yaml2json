@@ -2,6 +2,10 @@
 
 Command line YAML to JSON conversion tools
 
+## Require
+
+* PHP 5.3 or higher
+
 ## Install
 
 ```bash
