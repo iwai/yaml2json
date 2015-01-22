@@ -4,7 +4,12 @@ Command line YAML to JSON conversion tools
 
 ## Install
 
+```bash
+$ curl -LO https://github.com/iwai/yaml2json/releases/download/v1.0.0/yaml2json.phar
+$ chmod +x yaml2json.phar
+```
 
+Recommend move to /usr/local/bin, renamed ```yaml2json```
 
 ## Help
 
