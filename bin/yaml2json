@@ -1,0 +1,28 @@
+#!/usr/bin/env php
+<?php
+
+if (PHP_SAPI !== 'cli') {
+    echo 'Warning: yaml2json should be invoked via the CLI version of PHP, not the '.PHP_SAPI.' SAPI'.PHP_EOL;
+    exit(1);
+}
+
+require __DIR__.'/../vendor/autoload.php';
+
+$yaml2json_cmd = new Commando\Command();
+
+// Define first option
+$yaml2json_cmd->option()
+    ->require()
+    ->describedAs('YAML file path')
+    ->file();
+
+$yaml2json_cmd->option('human-readable')
+    ->describedAs('Output human readable')
+    ->boolean();
+
+
+if ($yaml2json_cmd['human-readable']) {
+    echo json_encode(Spyc::YAMLLoad($yaml2json_cmd[0]), JSON_PRETTY_PRINT);
+} else {
+    echo json_encode(Spyc::YAMLLoad($yaml2json_cmd[0]));
+}

@@ -1,0 +1,19 @@
+{
+  "name": "iwai/yaml2json",
+  "authors":[
+    { "name":"Yuji Iwai", "email":"iwai.ug@gmail.com" }
+  ],
+  "require": {
+    "mustangostang/spyc": "0.5.1",
+    "nategood/commando": "0.2.7"
+  },
+  "require-dev": {
+    "symfony/finder": "2.6.3",
+    "kherge/box": "~2.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Yaml2Json\\": "src/"
+    }
+  }
+}

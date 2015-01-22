@@ -1,0 +1,18 @@
+---
+  test: YES
+  aaaa: bbb
+  cccc:
+    - aaa
+    - bbb
+  eeee:
+    aaa: kkk
+    bbb: ddd
+---
+  test: YES
+  aaaa: bbb
+  cccc:
+    - aaa
+    - bbb
+  eeee:
+    aaa: kkk
+    bbb: ddd

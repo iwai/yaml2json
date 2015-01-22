@@ -1,0 +1,24 @@
+{
+  "alias": "yaml2json.phar",
+  "chmod": "0755",
+  "files": [
+    "LICENSE",
+    "vendor/autoload.php"
+  ],
+  "finder": [
+    {
+      "name": "*.php",
+      "exclude": [ "tests" ],
+      "in": [
+        "vendor/nategood",
+        "vendor/mustangostang",
+        "vendor/kevinlebrun",
+        "vendor/composer"
+      ]
+    }
+  ],
+  "git-version": "v1.0.0",
+  "main": "bin/yaml2json",
+  "output": "yaml2json.phar",
+  "stub": true
+}
