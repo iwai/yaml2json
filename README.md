@@ -35,7 +35,27 @@ arg 0
 
 ## Build Phar file (for developer)
 
-* clone this repository
-* composer install --no-dev
-* Get a box from http://box-project.org/
-* box build -c ./box.dist.json
+### Clone this repository
+
+```bash
+$ git clone https://github.com/iwai/yaml2json.git
+```
+
+### Composer install
+
+```bash
+$ cd yaml2json
+$ composer install --no-dev
+```
+
+### Get a box
+
+```bash
+$ curl -LSs https://box-project.github.io/box2/installer.php | php
+```
+
+### Build
+
+```bash
+$ ./box.phar build -c ./box.dist.json
+```
