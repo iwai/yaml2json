@@ -16,13 +16,21 @@ $yaml2json_cmd->option()
     ->describedAs('YAML file path')
     ->file();
 
+$yaml2json_cmd->option('r')
+    ->describedAs('Re-Conversion json to yaml')
+    ->boolean();
+
 $yaml2json_cmd->option('human-readable')
     ->describedAs('Output human readable')
     ->boolean();
 
-
-if ($yaml2json_cmd['human-readable']) {
-    echo json_encode(Spyc::YAMLLoad($yaml2json_cmd[0]), JSON_PRETTY_PRINT);
+if ($yaml2json_cmd['r']) {
+    echo Spyc::YAMLDump(json_decode(file_get_contents($yaml2json_cmd[0]), true));
 } else {
-    echo json_encode(Spyc::YAMLLoad($yaml2json_cmd[0]));
+    if ($yaml2json_cmd['human-readable']) {
+        echo json_encode(Spyc::YAMLLoad($yaml2json_cmd[0]), JSON_PRETTY_PRINT);
+    } else {
+        echo json_encode(Spyc::YAMLLoad($yaml2json_cmd[0]));
+    }
 }
+

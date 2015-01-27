@@ -1,0 +1,12 @@
+{
+    "test": true,
+    "aaaa": "bbb",
+    "cccc": [
+        "aaa",
+        "bbb"
+    ],
+    "eeee": {
+        "aaa": "kkk",
+        "bbb": "ddd"
+    }
+}
